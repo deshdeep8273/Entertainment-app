@@ -1,0 +1,29 @@
+.scroll {
+  max-height: 20%;
+  overflow: hidden;
+}
+
+.line {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  /* grid with one row */
+  grid-auto-flow: column;
+  column-gap: 40px;
+  overflow-x: auto;
+}
+
+/* hide scroll-bar */
+.line::-webkit-scrollbar {
+  width: 0px;
+}
+
+.line:hover {
+  cursor: ew-resize;
+}
+
+@media only screen and (max-width: 700px) {
+  .line {
+    column-gap: 16px;
+  }
+}

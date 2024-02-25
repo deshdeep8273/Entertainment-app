@@ -1,0 +1,106 @@
+.card {
+  position: relative;
+}
+
+.container {
+  position: relative;
+  /* Width of conatainer equal to grid column */
+  /* max-width: 100%; */
+}
+
+.thumbnail {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.thumbnail img {
+  /* remove extra 3px for div due to brovser setup */
+  vertical-align: top;
+  /* image width equal to container width */
+  width: 500px;
+  height: 260px;
+  /* max-width: 100% */
+}
+
+.info {
+  margin-top: 8px;
+  /* position: absolute;
+  margin-top: 220px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;  */
+}
+
+.info span {
+  font-size: 13px;
+  margin-right: 4px;
+}
+
+.info span:not(:first-child) {
+  margin-left: 4px;
+}
+
+/* small logo styling */
+.info svg path {
+  fill: var(--white-color);
+}
+
+.info h3 {
+  margin-top: 5px;
+}
+
+/* card styling for trending line */
+.card.trending .thumbnail img {
+  min-height: 310px;
+  max-height: 230px;
+}
+
+.card.trending .info {
+  position: absolute;
+  bottom: 24px;
+  left: 10px;
+}
+
+.card.trending .info h3 {
+  font-size: 23px;
+}
+
+.card.trending .info span {
+  font-size: 15px;
+}
+
+@media only screen and (min-width: 1600px) {
+  .card.trending .thumbnail img {
+    max-height: 300px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .info {
+    font-size: 11px;
+  }
+
+  .info h3 {
+    font-size: 14px;
+  }
+
+  .card.trending .info h3 {
+    font-size: 15px;
+  }
+
+  .card.trending .info span {
+    font-size: 12px;
+  }
+
+  .card.trending .info {
+    bottom: 16px;
+    left: 16px;
+  }
+
+  .card.trending .thumbnail img {
+    min-height: 140px;
+    max-height: 140px;
+  }
+}

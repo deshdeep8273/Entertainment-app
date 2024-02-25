@@ -1,0 +1,30 @@
+.button {
+  align-self: center;
+  margin: 20px 0;
+  width: 20px;
+  height: 20px;
+  /* for removing the tap highlight */
+  -webkit-tap-highlight-color: transparent;
+}
+
+.button svg path {
+  fill: var(--sea-color);
+}
+
+.button svg:hover path {
+  fill: var(--red-color);
+}
+
+.active svg path {
+  fill: var(--white-color);
+}
+
+.active:hover svg path {
+  fill: var(--white-color);
+}
+
+@media only screen and (max-width: 1100px) {
+  .button {
+    margin: 0 20px;
+  }
+}

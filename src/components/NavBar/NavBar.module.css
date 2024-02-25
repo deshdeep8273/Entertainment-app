@@ -1,0 +1,62 @@
+.navigation {
+  display: flex;
+  flex-direction: column;
+  margin: 32px 36px 32px 32px;
+  background-color: var(--dark-color);
+  border-radius: 20px;
+  min-width: 96px;
+  min-height: 460px;
+  max-height: 960px;
+  text-align: center;
+}
+
+/* to set avatar in the bottom */
+.navigation>*:last-child {
+  margin-top: auto;
+}
+
+@media only screen and (max-width: 1100px) {
+  .navigation {
+    flex-direction: row;
+    margin: 24px 23px;
+    justify-content: center;
+    align-items: center;
+    min-height: 72px;
+  }
+
+  /* to set avatar in the right */
+  .navigation>*:last-child {
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+
+  /* to set logo in the left */
+  .navigation>*:first-child {
+    margin-right: auto;
+    margin-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .navigation {
+    margin: 0;
+    border-radius: 0;
+    min-height: 56px;
+    min-width: 375px;
+  }
+
+  .navigation svg {
+    transform: scale(0.8);
+  }
+
+  .navigation>*:last-child {
+    width: 24px;
+    margin-right: 16px;
+  }
+
+  .navigation>*:first-child {
+    width: 25px;
+    margin-left: 16px;
+  }
+}

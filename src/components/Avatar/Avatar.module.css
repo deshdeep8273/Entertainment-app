@@ -1,0 +1,19 @@
+.avatar {
+  border: 1px solid #fff;
+  border-radius: 100px;
+  width: 40px;
+  align-self: center;
+  margin: 32px 0;
+  /* for removing the highlight */
+  -webkit-tap-highlight-color: transparent;
+}
+
+.avatar:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1100px) {
+  .avatar {
+    margin: 0;
+  }
+}

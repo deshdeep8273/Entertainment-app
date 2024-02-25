@@ -1,0 +1,38 @@
+.bookmark {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  /* for removing the tap highlight */
+  -webkit-tap-highlight-color: transparent;
+}
+
+.bookmark svg {
+  width: 12px;
+  height: 14px;
+  margin: auto;
+}
+
+/* use hover only on devicies with cursor*/
+@media (hover: hover) {
+  .bookmark:hover {
+    cursor: pointer;
+    transition: all 200ms;
+    background-color: var(--white-color);
+  }
+
+  .bookmark:hover .empty path {
+    stroke: var(--background-color);
+    fill: var(--white-color);
+  }
+
+  .bookmark:hover .full path {
+    stroke: var(--white-color);
+    fill: var(--background-color);
+  }
+}
